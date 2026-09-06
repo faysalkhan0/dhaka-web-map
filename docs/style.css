@@ -1,0 +1,48 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#panel {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+  max-width: 320px;
+}
+
+#panel h1 {
+  font-size: 15px;
+  margin: 0 0 8px 0;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.source-note {
+  font-size: 11px;
+  color: #666;
+  margin: 8px 0 0 0;
+}
+
+.maplibregl-popup-content {
+  font-size: 12px;
+  line-height: 1.4;
+}

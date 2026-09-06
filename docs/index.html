@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Dhaka Village Census Map</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+  <!-- MapLibre GL JS (free, open-source, no API token required) -->
+  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+
+  <!-- MAPBOX SWAP: comment the two lines above and uncomment these two instead
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js"></script>
+  -->
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="panel">
+    <h1>Dhaka District — Village Census Map</h1>
+    <div class="controls">
+      <label>
+        Colour by:
+        <select id="metric-select">
+          <option value="population">Population</option>
+          <option value="density">Density (per km²)</option>
+          <option value="TOTAL_MALE">Male population</option>
+          <option value="csv_hh_total">Households</option>
+        </select>
+      </label>
+      <label>
+        <input type="checkbox" id="mode-toggle" />
+        3D extrusion
+      </label>
+    </div>
+    <p class="source-note">
+      BBS 2022 Census · geometry and data loaded as two separate files, joined in-browser.
+    </p>
+  </header>
+
+  <div id="map"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
